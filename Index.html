@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{overflow-x:hidden;}
+        *{margin:0; padding:0;}
+        .wrap{width:100%;
+                height:200vh;
+                background-color:#987654;
+                position:absolute;} /*모달은 부모-자식관계 마크업이 아닌 absolute사용*/
+        .modal_back{width:100vw;
+                    height:100vh;
+                    background:rgba(0,0,0,5);
+                    position:absolute;
+                    display:none;}
+        .modal{width:500px;
+                height:250px;
+                background-color:#ffffff;
+                position:absolute;
+                display:none;}
+                //left:50% margin-left:-250px은 자바스크립트에 적용한것과 동일
+                //세로값 적용이 어려워 자바스크립트 사용!!
+    </style>
+    <script src="jquery-3.7.1.min.js" type="text/javascript" text="javascipt"></script>
+    <script>
+        $(document).ready(function(){
+            $(".wrap").click(function(){
+                let a=0;
+                a=$(window).scrollTop()
+                $(".modal_back").css{("top":a+"px")}
+
+                let b=0,
+                c=0; //.modal의 위치 중 가로세로값을 정할 변수
+
+                b=$(window).width() //화면의 가로값을 받아온다 -> 100%
+                b=b/2-250 //받아온 가로값의 2로 나누어 50%를 가져온 후, 내 크기의 절반을 반대로 보낸다(중앙정렬)
+                $(".modal").css({"left":b}) //계산된 값만큼 가로로 보낸다
+
+                c=$(window).height() //화면의 세로값을 받아온다->100%
+                c=c/2-125 //받아온 세로값의 2로 나누어 50%를 가져온 후, 내 크기 절반을 아래로 보낸다(중앙정렬)
+                c=c+a//⭐️스크롤의 위치가 이동된 만큼 추가로 이동을 해야한다 (스크롤 이동값 a)
+                $(".modal").css({"top":c}) //계산된 값만큼 세로로 보낸다
+
+ß
+                $(".modal_back, .modal").fadeIn(250)
+                $("body").css({"overflow-y":"hidden"})
+            })
+
+                $(".modal_back").click(function(){
+                $(".modal_back, .modal").fadeOut(250)
+                $("body").css({"overflow-y":"auto"})
+                 })
+        })
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrap"></div>
+    <div class="modal_back"></div>
+    <div class="modal"></div>
+
+    <!--모달 팝업레이어(뒷배경이 어두워지는 팝업레이어) / 레이어팝업(고정)
+        3판 모달 팝업 : 1판 기존화면 / 2판 검정색투명도 / 3판 팝업
+        2판 레이어 팝업 : 1판 기존화면 / 2판 팝업
+        
+        modal팝업창 만들 때 주의사항
+        : jquery는 이벤트를 사용하면 자식에게 상속된다
+       ex) .modal_back과 .modal을 부모자식으로 만들면 .modal을 클릭하면 꺼진다
+            .modal_back과 .modal을 형제관계로 만들면 .modal을 클릭해도 꺼지지 않는다>
+</body>
+</html>

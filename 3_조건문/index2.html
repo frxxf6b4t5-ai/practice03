@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // let a= Number(prompt());
+
+        // if(a==Number){
+        //     if(a%2==0){
+        //         alert("짝수")
+        //     }else if(a%2!=0){
+        //         alert("홀수")
+        //     }else{
+        //         alert("0")}
+        // }
+        // else{
+        //     alert("숫자를 입력하세요")}
+        
+        // --------------------------------------------------------------
+
+        let a=Number(prompt()),
+            b=0; //홀짝 구분을 위한 값을 담을 변수
+            
+            b=a%2 //모든 수를 2로 나눈 나머지로 홀짝 구분
+
+        if(b==1){
+            alert("입력값"+a+"를 2로 나눈 값은"+b+"라서 홀수")
+        }else if(b==0){
+            alert("입력값"+a+"를 2로 나눈 값은"+b+"라서 짝수")}
+
+            // ★ b대신에 a%2를 바로 쓰면 안됨 -->산술연산자는 변수와 대입연산자가 필요!! 
+            //    (연산된 값을 보존할 수 없음)
+    
+
+    
+    
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

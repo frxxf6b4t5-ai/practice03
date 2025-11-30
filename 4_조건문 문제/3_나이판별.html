@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        let a = Number(prompt()), //사용자가 입력한 값을 담을 변수
+            b=0; //나이 계산을 위한 변수
+
+        if(a>=0 || a<0){ //나이계산이 가능한 숫자 판별 (논리연산자는 적으면 적을수록 좋음)
+                b=2026-a //나이계산 진행
+                    if(b>=0 && b<=100){ //0~100사이만 계산가능한 조건
+                        if(b<20){
+                            alert("학생")
+                        }else if(b<40){
+                            alert("청년")
+                       }else if(b<60){
+                            alert("중년")
+                       }else{
+                            alert("노년")
+                       }
+                    }else{ //0~100세가 아니라면 없다
+                        alert("0세미만, 100세초과없음")}
+
+        }else{
+            alert("계산이 불가합니다")} //숫자가 아니라면 나이계산이 불가함
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        var a=Number(prompt());
+
+        if(a>0){
+            let b=0;
+            b=a%2
+            if(b==1){
+                alert("숫자o/양수/홀수")
+            }else if(b==0){
+                alert("숫자o/양수/짝수")
+            }else{
+                alert("정수를 넣어주세요")} //=>소수를 프롬프트에 쓸 경우를 고려함
+                //전체적으로 b=a%2선언가능! but 불필요한 연산이 될 수 있음
+                //따라서 조건에 따른 ||(또는) &&(그리고) 사용          
+        }else if(a<0){
+            alert("숫자o/음수")
+        }else if(a==0){
+            alert("숫자o/0")
+        }else{
+            alert("숫자가 아닙니다")
+        }
+        
+
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

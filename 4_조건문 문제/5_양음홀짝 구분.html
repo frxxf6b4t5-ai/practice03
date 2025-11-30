@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        let a = Number(prompt()),
+        b=0;
+        
+        if(a>=0 ||a<0){ //숫자일때
+            b=a%2 //홀짝 판별 (나눠서 나머지값이 0또는1)
+                if(a>0){
+                    if(b==1){
+                        alert("입력한"+a+"는 양수인 홀수")
+                    }else{
+                        alert("입력한"+a+"는 양수인 짝수")
+                    }
+                }else if(a<0){
+                    if(b==1){
+                        alert("입력한"+a+"는 음수인 홀수")
+                    }else{
+                        alert("입력한"+a+"는 음수인 짝수")
+                    }
+                
+                }else{
+                    alert("홀짝 구분이 불가능한 숫자")
+                }
+
+        }else{alert("숫자가 아닙니다")}
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

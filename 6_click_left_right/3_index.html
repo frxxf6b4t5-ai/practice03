@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div{width:100px;
+            height:100px;
+            background-color: red;}
+    </style>
+
+    <script src="../jquery/jquery-3.7.1.min.js" type="text/javascript" text="javascript"></script>
+    <script>
+        $(document).ready(function(){
+            let a = 0;
+            $("div").click(function(){
+                a++
+                a=a%4
+
+                if(a==1){
+                    $("div").css({"margin-left":"200px"})
+                }else if(a==2){
+                    $("div").css({"margin-top":"200px"})
+                }else if(a==3){
+                    $("div").css({"margin-left":"0"})
+                }else{
+                    $("div").css({"margin-top":"0"})
+                }
+
+            })
+                       
+        })
+
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

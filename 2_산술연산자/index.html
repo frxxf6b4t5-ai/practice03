@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // let a = Number(prompt());  //숫자 값을 입력받음
+        //     b=0; //a값을 보존하는 행위도 중요함!!  ==>어떤 타입(숫자or문자열)인지 미리 알 수 있게 초기화함!!
+
+        //     b=a+1 
+
+        // alert("입력하신값"+a+"더하기1은"+b+"입니다");        // alert(a);  변수에 덮어쓰는 걸로 생각할 것! 프롬프트에서 받은 숫자를 a에 대입->산술연산자->alert에 출력
+        // alert(a+1); => 출력은 가능하나 대입연산자와 변수가 필요하다는 점을 잊으면 안됨(코딩컨벤션)
+
+
+        let a= Number(prompt()),  //입력값을 담을 변수 a   ','쓰면 let여러번 쓸 필요없음
+            b= Number(prompt())  //입력값을 담을 변수 b
+            c=0 ;// c;로 써도됨 BUT 변수에 숫자가 들어갈지, 문자열이 들어갈지 미리 알려주기 위해 '0'을 넣음 (두수의 합을 담을 변수c)
+                // (int a;가 없기 때문)
+
+                    c=a%b; //입력값 a,b를 더한 값을 c에 대입 
+
+        alert("입력하신값"+a+"그리고"+b+"를 나눈 나머지는"+c+"입니다")
+        // %를 사용해서 boolean사용할 수 있음
+
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

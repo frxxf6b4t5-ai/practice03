@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div{width:100px;
+            height:100px;
+            background-color: red;}
+    </style>
+
+    <script src="../jquery/jquery-3.7.1.min.js" type="text/javascript" text="javascript"></script>
+    <script>
+        $(document).ready(function(){
+            // alert() //alert 꼭 넣어보기! test용
+            $("div").click(function(){
+                // $("body").css({"background-color":"#959595"}) 
+                //div를 클릭했을 때 바디 색상 바뀌어라
+                //(자바스크립트는 css와 다르게 자식->부모 적용가능=>캐스캐이팅 아님)
+                        
+                // $("div").fadeOut() 
+                // $("div").slideUp() //이벤트매서드 두번째단어는 대문자!!
+
+                $("div").css({"margin-left":"200px"}) 
+                // js에서 적용한 css는 내부직접으로 적용(태그명 style="")->더 강함
+
+            })
+            // $("div").mouseup(function(){
+            //     alert()
+            // })  //mousedown + mouseup = click 거의 사용하지 않음
+        })
+
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

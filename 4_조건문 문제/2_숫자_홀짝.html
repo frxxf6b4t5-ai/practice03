@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // var a=Number(prompt()); var 전역변수 -> 전체코드에 영향 / let 지역변수 -> 특정 지역에만 사용가능 =====> let만 사용할것!
+        let a=Number(prompt()); 
+
+        if(a>=0 || a<0){
+            alert("숫자가 맞습니다")
+            let b=0; //반드시 변수 선언 후 사용!!
+            b=a%2
+
+            if(b==1 || b==-1){
+                alert("홀수")
+            }else if(b==0){
+                alert("짝수")
+            }
+            // }else if(b==-1){
+            //     alert("홀수")   -> 기존 b활용해서 논리연산자 사용할것!!
+
+            else{"정수를 입력해주세요"} //정답을 정해놓지말고, 사용자가 어떤 행동을 할지 다양한 방향으로 예측해야함
+            
+        }else{
+            alert("숫자가 아닙니다")
+        }
+        
+
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

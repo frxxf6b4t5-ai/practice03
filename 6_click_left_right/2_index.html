@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div{width:100px;
+            height:100px;
+            background-color: red;}
+    </style>
+
+    <script src="../jquery/jquery-3.7.1.min.js" type="text/javascript" text="javascript"></script>
+    <script>
+        $(document).ready(function(){
+            let a=0; //이벤트 작동 전에 선언하여 한번만 덮어쓴다(클릭 한 뒤에 0을 다시 담지 않도록)
+                    //이벤트 작동 후에 선언하면 계속 0으로 덮어쓰게 됨
+            $("div").click(function(){
+                a++ //클릭할 횟수를 알기 위한 증가
+                a=a%2 //홀짝 구분 -> 홀수번 우측 / 짝수번 좌측으로 이동
+                     //클릭한 횟수를 저장해둘 필요X
+                
+                if(a==1){
+                    $("div").css({"margin-left":"200px"})
+                }else{$("div").css({"margin-left":"0"})}
+            })
+                       
+        })
+
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

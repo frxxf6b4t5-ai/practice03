@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{margin:0; padding:0; list-style:none;}
+        nav>ul {display:flex;}
+        nav li ul(display:none;) //ul대신 li를 쓰면 하나씩 뜨기 때문에 사용x
+    </style>
+    <script src="jquery-3.7.1.min.js" type="text/javascript" text="javascipt"></script>
+    <script>
+        $(document).ready(function(){
+            $("nav li").mouseover(function(){ 
+                //li 특성이 블록과 동일하기 때문에 자식크기만큼 존재 -> 따로 친자식 태그 필요x
+                $(this).find("ul").slideDown() //fadein out은 거의 사용x -> fadein out사용
+            }).mouseout(function(){
+                $(this).find("ul").slideUp()
+            })
+
+        })
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>웹디자인
+                <ul>
+                    <li>포토샵</li>
+                    <li>일러스트</li>
+                    <li>피그마</li>
+                </ul>
+            </li>
+            
+            <li>웹퍼블리싱
+                <ul>
+                    <li>html</li>
+                    <li>css</li>
+                    <li>jquery</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>

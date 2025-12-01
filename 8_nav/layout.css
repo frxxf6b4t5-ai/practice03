@@ -1,0 +1,14 @@
+*{margin:0; padding:0; list-style:none;}
+
+.slider_wrap{width:300px;
+            font-size:50px;}
+.slider img{width:100%;}
+
+.slider li{position: absolute;}
+.slider li{width:300px;}
+.slider{height: 250px;}
+
+.slider li{display:none;}
+.slider li:nth-child(1){display:block;}
+
+.slider_number li .on{background-color: red;}

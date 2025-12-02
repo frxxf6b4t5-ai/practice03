@@ -29,7 +29,6 @@ $(document).ready(function(){
             $number.eq(a).addClass("on")
         
         }else{
-            a--
             a=(a+3)%4
 
             $slider.stop().fadeOut()

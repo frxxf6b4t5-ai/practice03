@@ -8,7 +8,7 @@
 .slider li{width:300px;}
 .slider{height: 250px;}
 
-.slider li{display:none;}
-.slider li:nth-child(1){display:block;}
+/* .slider li{display:none;}
+.slider li:nth-child(1){display:block;} */
 
 .slider_number li .on{background-color: red;}

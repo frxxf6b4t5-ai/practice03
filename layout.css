@@ -1,0 +1,14 @@
+*{margin:0; padding:0; list-style:none;}
+
+.slider_wrap{width:300px;
+            font-size:50px;}
+.slider img{width:100%;}
+
+.slider{width:1200px;
+        position:relative;}
+        //trandsition-duration을 사용하려면 초기값이 필요함!!!!!
+
+.slider li{width:300px;}
+.slider ul{display:flex;}
+
+.slider_wrap(overflow:hidden;)

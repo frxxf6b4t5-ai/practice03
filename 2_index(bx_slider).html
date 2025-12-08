@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
+
+    <script>
+      $(document).ready(function(){
+        //$(".slider").bxSlider();});
+        $('.bxslider').bxSlider({
+        auto: true,
+        autoControls: true,
+        stopAutoOnClick: true,
+        pager: true,
+        slideWidth: 300,
+        mode: 'fade' //정리된 옵션에서 가져와 추가한 값
+        }); //example에서 가져온 옵션값 변경함 + options에서 가져온 옵션값 추가
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div class="slider"> -->
+    <div class="bxslider">
+      <div>I am a slide.</div>
+      <div>I am another slide.</div>
+    </div>
+
+    <!-- ⭐️ 상대경로(zip다운 후 dist 또는 src폴더안에 있는 제이쿼리 js,css파일 + 이미지, 벤더폴더 가져오기)
+            => 기존 제이쿼리 파일에서 수정을 원하면 min파일이 아닌 일반 파일에서 수정해야함(검사에서 몇번째 줄인지 확인!) 
+            / 절대경로 (경로 코드 복붙 후 head애 옮겨넣기)
+             =>전체 복붙이 아닌 필요한 부분의 코드를 가져와서 붙여넣어햠 -->
+    <!--슬라이더 플러그인: 스와이퍼 / 슬릭 / bx슬라이더 -->
+    <!-- 옵션값 적용방법을 알기 위해서는 example에 들어가서 확인할것
+        : 옵션값 변경시 선택자 꼭 확인하기!!!!!  -->
+ 
+</body>
+</html>
